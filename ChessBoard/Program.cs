@@ -53,9 +53,9 @@
                 {
 
                     if ((i + j) % 2 == 0)
-                        Console.Write(symbol1);
+                        Console.Write(symbol1 + " ");
                     else
-                        Console.Write(symbol2);
+                        Console.Write(symbol2 + " ");
                 }
                 Console.WriteLine("");
             }
