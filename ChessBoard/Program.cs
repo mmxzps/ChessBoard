@@ -10,6 +10,7 @@
             Console.InputEncoding = System.Text.Encoding.Unicode;
             string white = "◻︎"; //skapar en variabel med symbolen som värde.
             string black = "◼︎";
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Hur många rader/kolumner? ");
             string input = Console.ReadLine(); //tar input från användaren
             int antal = int.Parse(input); //omvandlar input till en "int" och lägger den i en variabel vid namnet "antal"
@@ -29,6 +30,7 @@
                 Console.WriteLine("");
 
             }
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("----------Nu kan du välja egen design på brädan----------");
             Console.WriteLine("---------------↓↓Välj från exmpels nedan↓↓---------------");
@@ -42,7 +44,7 @@
             string symbol2 = Console.ReadLine();
 
             Console.WriteLine("Hur många rader/kolumner? ");
-            string input2 = Console.ReadLine(); 
+            string input2 = Console.ReadLine();
             int antal2 = int.Parse(input2);
 
             for (int i = 0; i < antal2; i++)
@@ -53,13 +55,14 @@
                 {
 
                     if ((i + j) % 2 == 0)
-                        Console.Write(symbol1);
+                        Console.Write(symbol1 + " ");
                     else
-                        Console.Write(symbol2);
+                        Console.Write(symbol2 + " ");
                 }
                 Console.WriteLine("");
             }
-
+            Console.ResetColor();
+            
         }
     }
 }
